@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HREXT07 R00lz!</title>
-  <script
-          src="https://code.jquery.com/jquery-3.3.1.js"
-          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-          crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-  <script src="app/app.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+     <!-- use fontawesome from fontawesome.com  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <!-- use bootstrap from bootswatch.com -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css">
+    <title>ToDoList</title>
+  </head>
+  <body>
+    <!-- container for body -->
+    <div class="container mt-4">
+      <h1 class="display-4 text-center"><i class="fab fa-accusoft text-primary"></i> Saeed<span class="text-primary">ToDo</span>List</h1>
+     <!-- make a form to get input  -->
+      <form id="list-form">
+         <!-- Input Title -->
+        <div class="form-group">
+          <label for="title">Title</label>
+            <input type="text" id="title"
+            class="form-control">
+          </div>
+          <!-- Input Item -->
+        <div class="form-group">
+          <label for="item">Item</label>
+            <input type="text" id="item"
+            class="form-control">
+          </div>
+         <!-- Button to add item to the list -->
+         <input type="submit" value="Add list" class="btn btn-primary btn-block">
+      </form>
+      <!-- make a table to Display list -->
+        <table class="table table-striped mt-5">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Item</th>
+            <th></th>
+            </tr>
+          </thead>
+           <tbody id="item-list">
 
+           </tbody>
 
-  <!--
+        </table>
+    </div>
+   <!-- import app.js -->
+  <script src="app.js"></script>
 
-√ create container
-√ create button
-√ input field
-√ container to display text
-√ update button(or maybe click on the container item)
-√ delete button
-container for the response-feedback (start with alert)
--->
-</head>
-<body>
-
-<div class="container-main">
-  <header>My Cruddy App</header>
-  <div class="container-form">
-    <input type="text" class="input-key" placeholder="enter key">
-    <input type="text" class="input-value" placeholder="enter value">
-    <button class="btn-add">Submit</button>
-    <button class="btn-update">Update</button>
-    <button class="btn-delete">Delete</button>
-    <button class="btn-clear">Clear</button>
-  </div>
-  <div class="container-data"></div>
-</div>
-
-</body>
+  </body>
 </html>
